@@ -289,6 +289,60 @@ section {
   font-size: 0.9rem;
 }
 
+
+
+header,
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.header-flags {
+  position: absolute;
+  top: 18px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  pointer-events: none;
+}
+
+.header-flags-left {
+  left: 18px;
+}
+
+.header-flags-right {
+  right: 18px;
+}
+
+.crossed-flags {
+  position: relative;
+  width: 72px;
+  height: 72px;
+}
+
+.crossed-flags .flag {
+  position: absolute;
+  font-size: 2rem;
+  line-height: 1;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.18));
+}
+
+.crossed-flags .flag-uk {
+  left: 8px;
+  top: 16px;
+  transform: rotate(-22deg);
+}
+
+.crossed-flags .flag-pt {
+  right: 8px;
+  top: 16px;
+  transform: rotate(22deg);
+}
+
+
 footer {
   background: #0b2545;
   color: white;
@@ -331,6 +385,30 @@ th {
 }
 
 @media (max-width: 800px) {
+  .header-flags {
+    width: 58px;
+    height: 58px;
+    top: 10px;
+  }
+
+  .header-flags-left {
+    left: 8px;
+  }
+
+  .header-flags-right {
+    right: 8px;
+  }
+
+  .crossed-flags {
+    width: 50px;
+    height: 50px;
+  }
+
+  .crossed-flags .flag {
+    font-size: 1.5rem;
+  }
+
+
   nav {
     position: static;
   }
